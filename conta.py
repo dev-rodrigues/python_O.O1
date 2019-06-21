@@ -1,5 +1,3 @@
-
-
 class Conta:
 
     def __init__(self,numero, titular, saldo, limite):
@@ -17,3 +15,7 @@ class Conta:
 
     def saca(self, valor):
         self.saldo -= valor
+
+    def transfere(self, valor, destino):
+        self.saca(valor)
+        destino.deposita(valor)
